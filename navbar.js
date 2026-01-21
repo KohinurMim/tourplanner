@@ -2,7 +2,7 @@ const navRight = document.getElementById("navRight");
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
-
+// Get login and cart info from localStorage
 const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
 
@@ -20,15 +20,15 @@ function updateNav() {
   }
 }
 
-
+// Logout function
 function logout() {
   localStorage.removeItem("isLoggedIn");
   window.location.href = "login.html";
 }
 
+
 updateNav();
 
-// Hamburger menu 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
   navRight.classList.toggle("active");
@@ -36,12 +36,13 @@ hamburger.addEventListener("click", () => {
 
 function addToCart() {
   if (!isLoggedIn) {
- 
+    // If user is not logged in, redirect to login page
     alert("Please login first to book a package.");
-    window.location.href = "login.html";
+    window.location.href = "/component/login.html";
     return;
   }
 
+  // Increment cart count
   cartCount++;
   localStorage.setItem("cartCount", cartCount);
 

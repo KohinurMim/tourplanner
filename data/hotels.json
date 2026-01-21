@@ -5,7 +5,7 @@
     "location": "Cox's Bazar",
     "price": 8500,
     "rating": 4.6,
-    "image": "/asset/hotel_img_1.jpg",
+    "image": "asset/hotel_img_1.jpg",
     "facilities": ["WiFi", "Pool", "Sea View", "Breakfast"]
   },
   {
@@ -14,7 +14,7 @@
     "location": "Cox's Bazar",
     "price": 6500,
     "rating": 4.3,
-    "image": "/asset/hotel_img_2.jpg",
+    "image": "asset/hotel_img_2.jpg",
     "facilities": ["WiFi", "Restaurant", "Gym"]
   },
   {
@@ -23,7 +23,7 @@
     "location": "Sajek Valley",
     "price": 5200,
     "rating": 4.4,
-    "image": "/asset/hotel_img_3.jpg",
+    "image": "asset/hotel_img_3.jpg",
     "facilities": ["Hill View", "Restaurant", "Parking"]
   },
   {
@@ -32,7 +32,7 @@
     "location": "Sylhet",
     "price": 7000,
     "rating": 4.5,
-    "image": "/asset/hotel_img_4.jpg",
+    "image": "asset/hotel_img_4.jpg",
     "facilities": ["WiFi", "Pool", "Breakfast"]
   },
   {
@@ -41,7 +41,7 @@
     "location": "Dhaka",
     "price": 12000,
     "rating": 4.8,
-    "image": "/asset/hotel_img_5.jpg",
+    "image": "asset/hotel_img_5.jpg",
     "facilities": ["Luxury Rooms", "Spa", "Gym", "Pool"]
   },
     {
@@ -50,7 +50,7 @@
     "location": "Cox's Bazar",
     "price": 7200,
     "rating": 4.4,
-    "image": "/asset/hotel_img_6.jpg",
+    "image": "asset/hotel_img_6.jpg",
     "facilities": ["WiFi", "Pool", "Sea View", "Breakfast", "Parking"]
   },
   {
@@ -59,7 +59,7 @@
     "location": "Cox's Bazar",
     "price": 9800,
     "rating": 4.7,
-    "image": "/asset/hotel_img_7.jpg",
+    "image": "asset/hotel_img_7.jpg",
     "facilities": ["Eco Resort", "Private Beach", "Restaurant", "Sea View"]
   },
   {
@@ -68,7 +68,7 @@
     "location": "Bandarban",
     "price": 4500,
     "rating": 4.3,
-    "image": "/asset/hotel_img_8.jpg",
+    "image": "asset/hotel_img_8.jpg",
     "facilities": ["Hill View", "Restaurant", "Parking", "Nature Stay"]
   },
   {
@@ -77,7 +77,7 @@
     "location": "Rangamati",
     "price": 4200,
     "rating": 4.2,
-    "image": "/asset/hotel_img_9.jpg",
+    "image": "asset/hotel_img_9.jpg",
     "facilities": ["Lake View", "Balcony", "Parking"]
   },
   {
@@ -86,7 +86,7 @@
     "location": "Kuakata",
     "price": 3800,
     "rating": 4.1,
-    "image": "/asset/hotel_img_10.jpg",
+    "image": "asset/hotel_img_10.jpg",
     "facilities": ["Sea View", "Restaurant", "Parking"]
   },
   {
@@ -95,7 +95,7 @@
     "location": "Sreemangal",
     "price": 11000,
     "rating": 4.8,
-    "image": "/asset/hotel_img_11.jpg",
+    "image": "asset/hotel_img_11.jpg",
     "facilities": ["Tea Garden View", "Pool", "Spa", "Luxury Rooms"]
   },
   {
@@ -104,7 +104,7 @@
     "location": "Sylhet",
     "price": 6800,
     "rating": 4.5,
-    "image": "/asset/hotel_img_12.jpg",
+    "image": "asset/hotel_img_12.jpg",
     "facilities": ["Garden View", "WiFi", "Breakfast", "Parking"]
   },
   {
@@ -113,7 +113,7 @@
     "location": "Cox's Bazar",
     "price": 12500,
     "rating": 4.9,
-    "image": "/asset/hotel_img_13.jpg",
+    "image": "asset/hotel_img_13.jpg",
     "facilities": ["Luxury Rooms", "Private Beach", "Pool", "Spa"]
   },
   {
@@ -122,7 +122,7 @@
     "location": "Saint Martin's Island",
     "price": 5600,
     "rating": 4.0,
-    "image": "/asset/hotel_img_14.jpg",
+    "image": "asset/hotel_img_14.jpg",
     "facilities": ["Sea View", "Restaurant", "Island Stay"]
   },
   {
@@ -131,7 +131,7 @@
     "location": "Cox's Bazar",
     "price": 9000,
     "rating": 4.6,
-    "image": "/asset/hotel_img_15.jpg",
+    "image": "asset/hotel_img_15.jpg",
     "facilities": ["Infinity Pool", "Sea View", "Gym", "Breakfast"]
   }
 ]

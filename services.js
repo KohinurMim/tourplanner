@@ -1,4 +1,4 @@
-fetch("/data/services.json")
+fetch("data/services.json")
   .then(res => res.json())
   .then(data => {
     const container = document.getElementById("serviceContainer");

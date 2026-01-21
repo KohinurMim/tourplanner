@@ -4,7 +4,7 @@ async function login() {
   const message = document.getElementById("message");
 
   try {
-    const response = await fetch("/data/user.json");
+    const response = await fetch("data/user.json");
     const users = await response.json();
 
     let isValidUser = false;

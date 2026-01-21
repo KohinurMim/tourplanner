@@ -2,7 +2,7 @@ let hotels = [];
 const hotelContainer = document.getElementById("hotelContainer");
 const searchInput = document.getElementById("searchInput");
 
-fetch("/data/hotels.json")
+fetch("data/hotels.json")
   .then(res => res.json())
   .then(data => {
     hotels = data;

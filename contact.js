@@ -15,7 +15,7 @@ form.addEventListener("submit", function(e){
     return;
   }
 
-  // Simple email validation
+  
   const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if(!email.match(emailPattern)) {
     formMessage.style.color = "red";
@@ -23,10 +23,9 @@ form.addEventListener("submit", function(e){
     return;
   }
 
-  // If validation passes
+  
   formMessage.style.color = "green";
   formMessage.innerText = "Thank you! Your message has been sent.";
 
-  // Clear form
   form.reset();
 });

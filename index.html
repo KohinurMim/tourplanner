@@ -25,7 +25,7 @@
     
     .hero {
       background: linear-gradient(rgba(16, 34, 24, 0.8), rgba(7, 32, 19, 0.8)),
-          url('/asset/TourPlanner_bg.jpg') top center/cover no-repeat;
+          url('asset/TourPlanner_bg.jpg') top center/cover no-repeat;
       height: 70vh;
       display: flex;
       align-items: center;
@@ -188,7 +188,7 @@ fetch("navbar.html")
   .then(data => {
     document.getElementById("navbar-container").innerHTML = data;
 
-   
+    // ✅ Load navbar.js AFTER navbar HTML exists
     const script = document.createElement("script");
     script.src = "navbar.js";
     document.body.appendChild(script);

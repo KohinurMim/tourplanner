@@ -1,19 +1,19 @@
 const container = document.getElementById("packagesContainer");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("bookingModal");
-let currentBooking = null;  
+let currentBooking = null; 
 
 let allPackages = [];
 
-/* FETCH PACKAGES */
-fetch("/data/package.json")
+
+fetch("data/package.json")
   .then(res => res.json())
   .then(data => {
     allPackages = data.packages;
     displayPackages(allPackages);
   });
 
-/* DISPLAY PACKAGES */
+
 function displayPackages(packages) {
   container.innerHTML = "";
 
@@ -37,7 +37,6 @@ function displayPackages(packages) {
   });
 }
 
-
 searchInput.addEventListener("keyup", () => {
   const value = searchInput.value.toLowerCase();
   const filtered = allPackages.filter(pkg =>
@@ -46,16 +45,17 @@ searchInput.addEventListener("keyup", () => {
   displayPackages(filtered);
 });
 
+
 function openBooking(title, price) {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   if (!isLoggedIn) {
-    alert("Please login first to book a package.");
+    alert("⚠ Please login first to book a package.");
     window.location.href = "/component/login.html";
     return;
   }
 
-  currentBooking = { title, price }; // Store current booking
+  currentBooking = { title, price };
   modal.style.display = "flex";
   document.getElementById("pkgName").value = title;
   document.getElementById("pkgPrice").value = price;
@@ -64,7 +64,7 @@ function openBooking(title, price) {
 
 document.getElementById("closeModal").onclick = () => {
   modal.style.display = "none";
-  currentBooking = null; // Reset current booking
+  currentBooking = null; 
 };
 
 
@@ -73,20 +73,20 @@ document.getElementById("cancelBooking").addEventListener("click", () => {
 
   if (!currentBooking) return;
 
-  // Decrement cart count if cart is not empty
+ 
   let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
   if (cartCount > 0) {
     cartCount--;
     localStorage.setItem("cartCount", cartCount);
 
-    // Remove the package from cartItems
+   
     let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     cartItems = cartItems.filter(
       item => !(item.title === currentBooking.title && item.price === currentBooking.price)
     );
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-    // Update navbar cart count
+    
     const cartSpan = document.getElementById("cartCount");
     if (cartSpan) cartSpan.innerText = cartCount;
   }
@@ -95,7 +95,7 @@ document.getElementById("cancelBooking").addEventListener("click", () => {
   currentBooking = null;
 });
 
-/* FORM SUBMIT */
+
 document.getElementById("bookingForm").addEventListener("submit", e => {
   e.preventDefault();
 
@@ -118,10 +118,10 @@ document.getElementById("bookingForm").addEventListener("submit", e => {
   const cartSpan = document.getElementById("cartCount");
   if (cartSpan) cartSpan.innerText = cartCount;
 
-  alert(` "${pkgName}" booked successfully! Total items in cart: ${cartCount}`);
+  alert(`"${pkgName}" booked successfully! Total items in cart: ${cartCount}`);
   modal.style.display = "none";
 
- 
+
   document.getElementById("bookingForm").reset();
   currentBooking = null;
 });

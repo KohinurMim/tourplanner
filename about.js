@@ -1,5 +1,5 @@
 
-fetch("/data/about.json") 
+fetch("data/about.json") 
   .then(res => res.json())
   .then(data => {
     loadStats(data.stats);
