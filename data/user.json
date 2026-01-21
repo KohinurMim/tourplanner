@@ -1,0 +1,14 @@
+[
+  {
+    "email": "mim@gmail.com",
+    "password": "123456"
+  },
+  {
+    "email": "rahim@gmail.com",
+    "password": "rahim123"
+  },
+  {
+    "email": "admin@tourplanner.com",
+    "password": "admin123"
+  }
+]

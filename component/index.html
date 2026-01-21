@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TourPlanner | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="/component/navbar.css">
+  <link rel="stylesheet" href="/component/footer.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+  
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4fdf7;
+    }
+
+    
+    .hero {
+      background: linear-gradient(rgba(16, 34, 24, 0.8), rgba(7, 32, 19, 0.8)),
+          url('/asset/TourPlanner_bg.jpg') top center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      background-attachment: fixed;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero a {
+      background: orangered;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero a:hover {
+      background: #1d631d;
+    }
+
+    
+    .section {
+      padding: 50px 8%;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #0a7f3f;
+      margin-bottom: 20px;
+    }
+
+    
+    .services {
+  padding: 50px;
+  background: white;
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.services h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background:whitesmoke;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid rgb(8, 148, 8);
+  box-shadow: 0 8px 20px rgba(73, 73, 73, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(10px);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #0a7f3f;
+}
+
+.service-card h3 {
+  margin: 15px  10px;
+}
+
+.gallary{
+  width: 100%;
+  position: sticky;
+  top:150px;
+  display: flex;
+margin-bottom: 20px;
+
+}
+.gallary_img {
+  position: sticky;
+  top: 100px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.gallary_img:hover{
+transform: translateY(30PX);
+transition: transform 0.5s;
+}
+.gallary_img img{
+  height: 600px;
+  align-content: center;
+  width: 100%;
+  object-fit: cover;
+}
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar-container"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div>
+    <h1>Plan Your Perfect Trip</h1>
+    <p>Book tours, flights, hotels & cars at one place</p>
+   <a href="package.html" class="btn">Explore Packages</a>
+  </div>
+</section>
+<script src="services.js"></script>
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="service-container" id="serviceContainer">
+  
+  </div>
+</section>
+<div class="gallery">
+ <div class="gallary_img">
+  <img src="/asset/gallary_img_2.jpg">
+ </div>
+  <div class="gallary_img">
+  <img src="/asset/gallary_img_3.jpg">
+ </div>
+  <div class="gallary_img">
+  <img src="/asset/gallary_img_4.jpg">
+ </div>
+  <div class="gallary_img">
+  <img src="/asset/gallary_img_1.jpg">
+ </div>
+</div>
+<!-- Footer -->
+
+
+<!-- Load Navbar -->
+<script>
+fetch("/component/navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar-container").innerHTML = data;
+
+    // ✅ Load navbar.js AFTER navbar HTML exists
+    const script = document.createElement("script");
+    script.src = "/component/navbar.js";
+    document.body.appendChild(script);
+  });
+</script>
+<div id="footer"></div>
+
+<script>
+  fetch("/component/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

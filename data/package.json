@@ -1,0 +1,151 @@
+{
+  "packages": [
+    {
+      "id": 1,
+      "title": "Cox's Bazar Beach",
+      "description": "Relax at the world's longest natural sea beach with golden sand and scenic sunsets.",
+      "price": "৳12,000",
+      "image": "/asset/cox's bazar.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Sundarbans Safari",
+      "description": "Explore the world's largest mangrove forest and experience wildlife adventure.",
+      "price": "৳18,000",
+      "image": "/asset/Sundarban.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Srimangal Tea Garden",
+      "description": "Enjoy peaceful moments walking through lush green tea estates.",
+      "price": "৳8,500",
+      "image": "/asset/tea_garden.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sajek Valley Tour",
+      "description": "Discover the Queen of Hills with clouds, sunrise, and tribal culture.",
+      "price": "৳12,500",
+      "image": "/asset/sajek valey.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Saint Martin's Island",
+      "description": "Relax on the only coral island of Bangladesh with crystal clear water.",
+      "price": "৳13,000",
+      "image": "/asset/saint martin.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Kuakata Sea Beach",
+      "description": "Experience both sunrise and sunset at the same beach.",
+      "price": "৳11,500",
+      "image": "/asset/kuakata.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Rangamati & Kaptai Lake",
+      "description": "Enjoy boating and hill views around the beautiful Kaptai Lake.",
+      "price": "৳10,500",
+      "image": "/asset/kaptai.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Bandarban Hill Adventure",
+      "description": "Explore hills, waterfalls, and tribal villages in Bandarban.",
+      "price": "৳14,000",
+      "image": "/asset/hill_climbing.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Ratargul Swamp Forest",
+      "description": "Boat through the freshwater swamp forest surrounded by greenery.",
+      "price": "৳11,000",
+      "image": "/asset/ratargul.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Sylhet & Jaflong Tour",
+      "description": "Visit stone collection sites and flowing rivers near the border.",
+      "price": "৳9,000",
+      "image": "/asset/sylhet.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Paharpur Buddhist Monastery",
+      "description": "Discover the largest ancient Buddhist monastery in South Asia.",
+      "price": "৳9,500",
+      "image": "/asset/paharpur.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Mahasthangarh Heritage Tour",
+      "description": "Explore archaeological ruins of Bangladesh’s oldest city.",
+      "price": "৳8,500",
+      "image": "/asset/mohasthangar.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Bagerhat Mosque City",
+      "description": "Visit the UNESCO World Heritage site with historic mosques.",
+      "price": "৳10,000",
+      "image": "/asset/bagerhat.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Chittagong Hill Tracts",
+      "description": "Experience green hills, waterfalls, and indigenous culture.",
+      "price": "৳15,000",
+      "image": "/asset/chittagong_hill.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Foy’s Lake Amusement & Resort",
+      "description": "Enjoy a fun-filled day surrounded by scenic lake views.",
+      "price": "৳9,500",
+      "image": "/asset/foys_lake.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Ahsan Manzil & Old Dhaka Tour",
+      "description": "Explore heritage buildings and traditional food streets.",
+      "price": "৳7,500",
+      "image": "/asset/ahsan_monzil.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Sitakunda Eco Park",
+      "description": "Hike through eco trails and waterfalls in Sitakunda.",
+      "price": "৳8,000",
+      "image": "/asset/eco_park.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Nijhum Dwip Island Tour",
+      "description": "Explore a remote island famous for deer and nature.",
+      "price": "৳12,000",
+      "image": "/asset/nijhum_dip.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Sonargaon Heritage Tour",
+      "description": "Discover the ancient capital with folk art museum.",
+      "price": "৳8,500",
+      "image": "/asset/shonargaon.jpg"
+    },
+    {
+      "id": 20,
+      "title": "Lawachara National Park",
+      "description": "Walk through tropical rainforest and wildlife trails.",
+      "price": "৳9,000",
+      "image": "/asset/lowachara.jpg"
+    },
+    {
+  "id": 21,
+  "title": "Panam Nagar Ancient City",
+  "description": "Explore the historic abandoned city of Panam Nagar with centuries-old architecture.",
+  "price": "৳8,000",
+  "image": "/asset/ancient_city.jpg"
+}
+  ]
+}

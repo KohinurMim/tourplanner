@@ -1,0 +1,126 @@
+.footer {
+  background: #fcfcfc;
+  color: rgb(4, 155, 4);
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.footer-menu{
+    border-right: 2px solid rgb(11, 141, 11);
+}
+
+
+.footer-menu ul {
+  list-style: none;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+  color: green;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight:500;
+  padding:7px 15px;
+  gap:5px;
+}
+
+.footer-menu ul li a:hover {
+  background-color: #018f3c;
+  color: white;
+}
+
+.footer-logo h2 {
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+.footer-logo{
+    border-right: 2px solid rgb(11, 141, 11);
+   text-align: center;
+}
+.footer-logo img {
+ height: 200px;
+ width: 200px;
+ 
+}
+.footer-icon{
+    text-align: center;
+    align-items: center;
+}
+.social-icons a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #2ecc71;
+  color: #0f3d2e;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #27ae60;
+  transform: translateY(-5px);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: #018f3c;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 15px;
+}
+@media (max-width: 768px) {
+
+  .footer-container {
+    grid-template-columns: 1fr;   /* stack vertically */
+    gap: 25px;
+    text-align: center;
+  }
+
+  /* Remove right borders on mobile */
+  .footer-menu,
+  .footer-logo {
+    border-right: none;
+  }
+
+  .footer-menu ul {
+    padding: 0;
+  }
+
+  .footer-menu ul li a {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  /* Resize logo for mobile */
+  .footer-logo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons a {
+    margin: 5px;
+  }
+
+  .footer {
+    padding: 40px 15px 15px;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  
+  "about": {
+    "heading": "Who We Are",
+    "description": "TourPlanner is a travel planning platform focused on exploring the most beautiful tourist destinations of Bangladesh. We provide curated tour packages, hotel suggestions, and personalized travel experiences to make your journey memorable."
+  },
+  "stats": [
+    { "label": "Happy Travelers", "value": 1200 },
+    { "label": "Tour Packages", "value": 85 },
+    { "label": "Destinations", "value": 25 }
+  ],
+  "features": [
+    "Trusted Travel Experts",
+    "Affordable Packages",
+    "Handpicked Hotels",
+    "24/7 Customer Support"
+  ],
+  "testimonials": [
+    {
+      "name": "Rahim Ahmed",
+      "message": "TourPlanner made our Cox’s Bazar trip unforgettable."
+    },
+    {
+      "name": "Nusrat Jahan",
+      "message": "Affordable packages with excellent service."
+    },
+    {
+      "name": "Tanvir Hasan",
+      "message": "Best tour planning platform in Bangladesh."
+    }
+  ]
+}

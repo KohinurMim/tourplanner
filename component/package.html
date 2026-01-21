@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- NAVBAR CSS -->
+  <link rel="stylesheet" href="/component/navbar.css">
+  <link rel="stylesheet" href="/component/footer.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2ecc71;
+      margin: 30px 0 10px;
+    }
+
+    .search-box {
+      max-width: 600px;
+      margin: 20px auto 40px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 12px 18px;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .search-box input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-box i {
+      color: #2ecc71;
+      margin-right: 10px;
+    }
+
+    .packages-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .package-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .package-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .package-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .package-content {
+      padding: 20px;
+    }
+
+    .package-content h3 {
+      color: #2ecc71;
+    }
+
+    .package-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #27ae60;
+      margin: 12px 0;
+    }
+
+    .package-content button {
+      width: 100%;
+      padding: 12px;
+      background: rgb(230, 158, 24);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      width: 90%;
+      max-width: 420px;
+      border-radius: 14px;
+    }
+
+    .modal-content input,
+    .modal-content button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 12px;
+    }
+
+    .close {
+      float: right;
+      font-size: 22px;
+      cursor: pointer;
+    }
+    .contact-cta {
+  background-image: url("/asset/dark_green.jpg");
+  background-position:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.contact-cta h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.contact-cta p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-cta .cta-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: white;
+  color: #2ecc71;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-cta .cta-btn:hover {
+  background: #27ae60;
+  color: white;
+}
+
+  </style>
+</head>
+
+<body>
+
+
+  <div id="navbar-container"></div>
+
+
+  <h1>Our Tour Packages</h1>
+  <div class="search-box">
+    <i class="fa fa-search"></i>
+    <input type="text" id="searchInput" placeholder="Search tour packages">
+  </div>
+
+  <div class="packages-container" id="packagesContainer"></div>
+
+
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Book Package</h2>
+
+      <form id="bookingForm">
+        <input type="text" id="pkgName" readonly>
+        <input type="text" id="pkgPrice" readonly>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="date" required>
+        <button type="submit">Confirm Booking</button>
+        <button type="button" id="cancelBooking" style="background:#f44336; margin-top:10px;">Cancel Booking</button>
+      </form>
+    </div>
+  </div>
+<section class="contact-cta">
+  <div class="cta-container">
+    <h2>Not sure which tour to choose?</h2>
+    <p>Contact us and we’ll help you pick the perfect package for your trip!</p>
+    <a href="/contact.html" class="cta-btn">Contact Us</a>
+  </div>
+</section>
+
+  <script src="package.js"></script>
+
+  
+  <script>
+    fetch("/component/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/component/navbar.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+  </script>
+<div id="footer"></div>
+
+<script>
+  fetch("/component/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+</body>
+</html>

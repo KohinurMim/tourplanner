@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Tour Packages",
+    "description": "Explore affordable tour packages with guided travel plans.",
+     "icon": "fa-solid fa-person-walking-luggage"
+
+  },
+  {
+    "id": 2,
+    "title": "Flight Booking",
+    "description": "Book domestic and international flights at best prices.",
+    "icon": "fa-solid fa-plane-departure"
+    
+  },
+  {
+    "id": 3,
+    "title": "Hotel Reservation",
+    "description": "Comfortable hotel stays with flexible booking options.",
+    "icon": "fa-solid fa-hotel"
+ 
+  },
+{
+    "id": 4,
+    "title": "Car Rental",
+    "description": "Rent cars with professional drivers for smooth journeys.",
+    "icon": "fa-solid fa-car"
+},
+  
+{
+    "id": 5,
+    "title": "Guide Booking",
+    "description": "Explore affordable tour with guide travel plans.",
+    "icon": "fa-solid fa-street-view"
+  },
+{
+    "id": 2,
+    "title": "Transport booking",
+    "description": "Book Transport at best prices.",
+    "icon":"fa-solid fa-bus-simple"
+    
+  },
+  {
+    "id": 3,
+    "title": "Tour Planning",
+    "description": "Comfortable tour with flexible booking options.",
+  "icon":"fa-solid fa-list"
+ 
+  },
+  {
+    "id": 4,
+    "title": "Visa Processing",
+    "description": "Visa processing with professional person",
+    "icon":"fa-brands fa-cc-visa"
+  
+  }
+]

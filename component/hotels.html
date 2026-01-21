@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+ 
+  <link rel="stylesheet" href="/component/navbar.css">
+  <link rel="stylesheet" href="/component/footer.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+.banner {
+  background:url("/asset/hotels_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  text-align: center;
+  color: #fff;
+  width: 80%;
+}
+
+.banner-content h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.banner-content button {
+  padding: 10px 25px;
+  background: #ff9800;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.banner-content input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.hotel-section {
+  padding: 50px;
+}
+
+.hotel-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hotel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+
+.hotel-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 15px;
+}
+
+.hotel-info h3 {
+  margin-bottom: 5px;
+}
+
+.hotel-info p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.hotel-info button {
+  width: 100%;
+  padding: 8px;
+  background: rgb(230, 69, 11);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+</style>
+<body>
+ <div id="navbar-container"></div>
+
+<header class="banner">
+  <div class="banner-content">
+    <h1>Find the Best Hotels in Bangladesh</h1>
+    <p>Explore top tourist destinations and book the perfect stay for your journey.</p>
+    <button>Explore Hotels</button>
+
+    <!-- SEARCH BAR -->
+    <input type="text" id="searchInput" placeholder="Search by location (Cox's Bazar, Sajek, Sylhet...)">
+  </div>
+</header>
+
+
+<section class="hotel-section">
+  <h2>Hotel Suggestions</h2>
+  <div class="hotel-container" id="hotelContainer">
+    
+  </div>
+</section>
+
+<div class="modal" id="hotelModal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImage">
+    <h2 id="modalName"></h2>
+    <p id="modalLocation"></p>
+    <p id="modalPrice"></p>
+    <p id="modalRating"></p>
+    <ul id="modalfacilities"></ul>
+  </div>
+</div>
+ <script>
+    fetch("/component/navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "/component/navbar.js";
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+  </script>
+<div id="footer"></div>
+
+<script>
+  fetch("/component/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+<script src="hotels.js"></script>
+</body>
+</html>
