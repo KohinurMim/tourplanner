@@ -2,7 +2,7 @@ const navRight = document.getElementById("navRight");
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
-// Get login and cart info from localStorage
+
 const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
 
@@ -20,7 +20,7 @@ function updateNav() {
   }
 }
 
-// Logout function
+
 function logout() {
   localStorage.removeItem("isLoggedIn");
   window.location.href = "login.html";
@@ -45,7 +45,7 @@ function addToCart() {
   cartCount++;
   localStorage.setItem("cartCount", cartCount);
 
-  // Update cart number in navbar
+ 
   const cartSpan = document.getElementById("cartCount");
   if (cartSpan) cartSpan.innerText = cartCount;
 
