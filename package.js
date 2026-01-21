@@ -1,7 +1,7 @@
 const container = document.getElementById("packagesContainer");
 const searchInput = document.getElementById("searchInput");
 const modal = document.getElementById("bookingModal");
-let currentBooking = null; // Track current package in modal
+let currentBooking = null;  
 
 let allPackages = [];
 
@@ -37,7 +37,7 @@ function displayPackages(packages) {
   });
 }
 
-/* SEARCH FILTER */
+
 searchInput.addEventListener("keyup", () => {
   const value = searchInput.value.toLowerCase();
   const filtered = allPackages.filter(pkg =>
@@ -46,12 +46,11 @@ searchInput.addEventListener("keyup", () => {
   displayPackages(filtered);
 });
 
-/* OPEN BOOKING MODAL */
 function openBooking(title, price) {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   if (!isLoggedIn) {
-    alert("⚠ Please login first to book a package.");
+    alert("Please login first to book a package.");
     window.location.href = "/component/login.html";
     return;
   }
@@ -62,13 +61,13 @@ function openBooking(title, price) {
   document.getElementById("pkgPrice").value = price;
 }
 
-/* CLOSE MODAL */
+
 document.getElementById("closeModal").onclick = () => {
   modal.style.display = "none";
   currentBooking = null; // Reset current booking
 };
 
-/* CANCEL BOOKING */
+
 document.getElementById("cancelBooking").addEventListener("click", () => {
   modal.style.display = "none";
 
@@ -92,7 +91,7 @@ document.getElementById("cancelBooking").addEventListener("click", () => {
     if (cartSpan) cartSpan.innerText = cartCount;
   }
 
-  alert(`❌ Booking for "${currentBooking.title}" canceled.`);
+  alert(`Booking for "${currentBooking.title}" canceled.`);
   currentBooking = null;
 });
 
@@ -105,24 +104,24 @@ document.getElementById("bookingForm").addEventListener("submit", e => {
   const pkgName = document.getElementById("pkgName").value;
   const pkgPrice = document.getElementById("pkgPrice").value;
 
-  // Increment cart count after user submits the form
+
   let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
   cartCount++;
   localStorage.setItem("cartCount", cartCount);
 
-  // Save booked package to localStorage
+ 
   let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
   cartItems.push({ title: pkgName, price: pkgPrice });
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-  // Update navbar cart count if exists
+  
   const cartSpan = document.getElementById("cartCount");
   if (cartSpan) cartSpan.innerText = cartCount;
 
-  alert(`🎉 "${pkgName}" booked successfully! Total items in cart: ${cartCount}`);
+  alert(` "${pkgName}" booked successfully! Total items in cart: ${cartCount}`);
   modal.style.display = "none";
 
-  // Reset form and current booking
+ 
   document.getElementById("bookingForm").reset();
   currentBooking = null;
 });

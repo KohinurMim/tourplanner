@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title></title>
  
-  <link rel="stylesheet" href="/component/navbar.css">
-  <link rel="stylesheet" href="/component/footer.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
 </head>
 <style>
     * {
@@ -182,13 +182,13 @@
   </div>
 </div>
  <script>
-    fetch("/component/navbar.html")
+    fetch("navbar.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-container").innerHTML = data;
 
         const script = document.createElement("script");
-        script.src = "/component/navbar.js";
+        script.src = "navbar.js";
         script.defer = true;
         document.body.appendChild(script);
       });
@@ -196,7 +196,7 @@
 <div id="footer"></div>
 
 <script>
-  fetch("/component/footer.html")
+  fetch("footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;

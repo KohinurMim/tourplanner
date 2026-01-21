@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- NAVBAR CSS -->
-  <link rel="stylesheet" href="/component/navbar.css">
-  <link rel="stylesheet" href="/component/footer.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
 
   <style>
     body {
@@ -212,7 +212,7 @@
   <div class="cta-container">
     <h2>Not sure which tour to choose?</h2>
     <p>Contact us and we’ll help you pick the perfect package for your trip!</p>
-    <a href="/contact.html" class="cta-btn">Contact Us</a>
+    <a href="contact.html" class="cta-btn">Contact Us</a>
   </div>
 </section>
 
@@ -220,13 +220,13 @@
 
   
   <script>
-    fetch("/component/navbar.html")
+    fetch("navbar.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-container").innerHTML = data;
 
         const script = document.createElement("script");
-        script.src = "/component/navbar.js";
+        script.src = "navbar.js";
         script.defer = true;
         document.body.appendChild(script);
       });
@@ -234,7 +234,7 @@
 <div id="footer"></div>
 
 <script>
-  fetch("/component/footer.html")
+  fetch("footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;

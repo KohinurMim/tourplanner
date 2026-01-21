@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Navbar CSS -->
-  <link rel="stylesheet" href="/component/navbar.css">
-  <link rel="stylesheet" href="/component/footer.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
@@ -46,7 +46,7 @@
       margin-bottom: 25px;
     }
 
-    .hero button {
+    .hero a {
       background: orangered;
       color: white;
       border: none;
@@ -55,9 +55,10 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      text-decoration: none;
     }
 
-    .hero button:hover {
+    .hero a:hover {
       background: #1d631d;
     }
 
@@ -118,13 +119,13 @@
   position: sticky;
   top:150px;
   display: flex;
-
+margin-bottom: 20px;
 
 }
 .gallary_img {
   position: sticky;
   top: 100px;
-  height: 400px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -153,7 +154,7 @@ transition: transform 0.5s;
   <div>
     <h1>Plan Your Perfect Trip</h1>
     <p>Book tours, flights, hotels & cars at one place</p>
-    <button>Explore Packages</button>
+   <a href="package.html" class="btn">Explore Packages</a>
   </div>
 </section>
 <script src="services.js"></script>
@@ -177,25 +178,26 @@ transition: transform 0.5s;
   <img src="/asset/gallary_img_1.jpg">
  </div>
 </div>
-<div class="footer"></div>
+<!-- Footer -->
 
 
+<!-- Load Navbar -->
 <script>
-fetch("/component/navbar.html")
+fetch("navbar.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("navbar-container").innerHTML = data;
 
    
     const script = document.createElement("script");
-    script.src = "/component/navbar.js";
+    script.src = "navbar.js";
     document.body.appendChild(script);
   });
 </script>
-
+<div id="footer"></div>
 
 <script>
-  fetch("/component/footer.html")
+  fetch("footer.html")
     .then(res => res.text())
     .then(data => {
       document.getElementById("footer").innerHTML = data;

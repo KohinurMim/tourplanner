@@ -15,7 +15,7 @@ function updateNav() {
     `;
   } else {
     navRight.innerHTML = `
-      <a href="/component/login.html" class="nav-btn">Login</a>
+      <a href="login.html" class="nav-btn">Login</a>
     `;
   }
 }
@@ -23,28 +23,25 @@ function updateNav() {
 // Logout function
 function logout() {
   localStorage.removeItem("isLoggedIn");
-  window.location.href = "/component/login.html";
+  window.location.href = "login.html";
 }
 
-// Call once to initialize navbar
 updateNav();
 
-// Hamburger menu toggle
+// Hamburger menu 
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
   navRight.classList.toggle("active");
 });
 
-/* ===== Function to add a package to cart ===== */
 function addToCart() {
   if (!isLoggedIn) {
-    // If user is not logged in, redirect to login page
+ 
     alert("Please login first to book a package.");
-    window.location.href = "/component/login.html";
+    window.location.href = "login.html";
     return;
   }
 
-  // Increment cart count
   cartCount++;
   localStorage.setItem("cartCount", cartCount);
 
